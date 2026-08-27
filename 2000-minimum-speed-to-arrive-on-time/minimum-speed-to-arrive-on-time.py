@@ -11,7 +11,6 @@ class Solution:
             else:
                 low=speed+1
         return ans
-
     def canReach(self,dist,speed,hour):
         time=0.0
         for i in range(len(dist)):
