@@ -13,7 +13,6 @@ class Solution:
             else:
                 minDay=days+1
         return ans
-
     def canMake(self,bloomDay,days,m,k):
         count,b=0,0
         for i in bloomDay:
@@ -23,8 +22,7 @@ class Solution:
                     b+=1
                     count=0
             else:
-                count=0
+                count=0          
+        return b>=m
             
-        if(b>=m):
-            return True
 
