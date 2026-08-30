@@ -1,7 +1,9 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        minDay=min(bloomDay)
-        maxDay=max(bloomDay)
+        n=len(bloomDay)
+        if m*k>n:
+            return -1
+        minDay,maxDay=min(bloomDay),max(bloomDay)
         ans=-1
         while(minDay<=maxDay):
             days=minDay+(maxDay-minDay)//2
@@ -13,8 +15,7 @@ class Solution:
         return ans
 
     def canMake(self,bloomDay,days,m,k):
-        count=0
-        b=0
+        count,b=0,0
         for i in bloomDay:
             if days>=i:
                 count+=1
